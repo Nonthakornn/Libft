@@ -2,3 +2,4 @@ note
 test.c
 test
 *.exe
+*.o
