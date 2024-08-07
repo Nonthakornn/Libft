@@ -1,4 +1,4 @@
-#include "libc.h"
+#include "libft.h"
 
 // 32-bit signed integer:
 //     INT_MAX: 2,147,483,647 
@@ -11,19 +11,41 @@
 
 int ft_atoi(const char *str)
 {
-    int i;
-    long sign;
-    long long result;
+	int i;
+	int res;
+	int sign;
 
-    i = 0;
-    sign = 1;
-    result = 0;
-    while (str[i] >= 9 && str[i] <= 13 || str[i] == 32)
-        i++;
-    if (str[i] == '+' || str[i] == '-')
-    {
-        if (str[i] == '-')
-            sign *= -1;
-        i++;
-    }
+	i = 0;
+	sign = 1;
+	res = 0;
+
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-')
+	{
+		sign = -1;
+		i++;
+	}
+	else if (str[i] == '+')
+		i++;
+	while (str[i] != 0 && str[i] >= '0' && str[i] <= '9' )
+	{
+		res = res * 10 + (str[i] - '0');
+		i++;
+	}
+	// while (ft_isdigit(str[i]))
+	// {
+	// 	res = res * 10 + (str[i] - '0');
+	// 	i++;
+	// }
+
+	return (res * sign);
+
+}
+
+int main()
+{
+	int	result = ft_atoi("a123ab");
+	printf("The result is %d", result);
+	return 0;
 }
