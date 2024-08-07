@@ -33,19 +33,13 @@ int ft_atoi(const char *str)
 		res = res * 10 + (str[i] - '0');
 		i++;
 	}
-	// while (ft_isdigit(str[i]))
-	// {
-	// 	res = res * 10 + (str[i] - '0');
-	// 	i++;
-	// }
-
 	return (res * sign);
 
 }
 
-int main()
-{
-	int	result = ft_atoi("a123ab");
-	printf("The result is %d", result);
-	return 0;
-}
+// int main()
+// {
+// 	int	result = ft_atoi("a123ab");
+// 	printf("The result is %d", result);
+// 	return 0;
+// }
