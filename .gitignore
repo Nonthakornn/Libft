@@ -3,3 +3,4 @@ test.c
 test
 *.exe
 *.o
+*.vscode

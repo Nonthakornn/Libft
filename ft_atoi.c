@@ -39,7 +39,7 @@ int ft_atoi(const char *str)
 
 // int main()
 // {
-// 	int	result = ft_atoi("a123ab");
+// 	int	result = ft_atoi("123abc");
 // 	printf("The result is %d", result);
 // 	return 0;
 // }
