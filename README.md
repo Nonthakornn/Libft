@@ -8,9 +8,5 @@ This project is about coding C library
 - `ft_isprint` - Check for printable character 
 - `ft_toupper` - Convert to uppercase
 - `ft_tolower` - Convert to Lowercase
-- `ft_atoi` - convert ASCII string to integer (Consider about white space and sign)
+- `ft_atoi` - Convert ASCII string to integer (Consider about white space, sign and number)
   - example - 123abc --> 123, abc132 --> 0, 1a2b3x --> 1
-
-
-
-
