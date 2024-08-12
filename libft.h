@@ -6,7 +6,7 @@
 # include <limits.h>
 //Delete later just for testing
 # include <stdio.h>
-
+# include <stddef.h>
 
 int ft_isalpha(int c);
 int ft_isdigit(int c);
@@ -18,6 +18,7 @@ int ft_tolower(int c);
 int ft_atoi(const char *str);
 
 size_t ft_strlen(const char *str);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 
 void *ft_memset(void *s, int c, size_t n);
 
