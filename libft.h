@@ -20,6 +20,6 @@ int ft_atoi(const char *str);
 size_t ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);
 
-void *ft_memset(void *s, int c, size_t n);
+void *ft_memset(void *b, int c, size_t len);
 
 #endif
