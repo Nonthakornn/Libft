@@ -20,11 +20,13 @@ char *ft_strchr(const char *s, int c)
     return (NULL);
 }
 
-// int main()
-// {
-//     const char *str = "Hello, World";
-//     char ch = 'o';
+/*
+int main()
+{
+     const char *str = "first,second, last";
+     char ch = ',';
 
-//     char *result = ft_strchr(str, ch);
-//     printf("%s", result);
-// }
+     char *result = ft_strchr(str, ch);
+     printf("%s", result);
+}
+*/

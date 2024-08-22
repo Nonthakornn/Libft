@@ -13,5 +13,5 @@ This project is about coding C library
 - `ft_strlen` - Count String length
 - `ft_memset` - Function that we can use to set a whole block of memory to a particular value (useful function for efficiently initializing or resetting memory)
 - `ft_strlcpy` - Copy sring
-- `ft_strchr` - locate character in string with the first occurance of the character that found and print the rest of the character after it found
-- 
+- `ft_strchr` - locate the first character that seen and print out the rest
+- `ft_strrchr` - locate the last character that seen and print the rest 
