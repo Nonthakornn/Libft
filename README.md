@@ -4,7 +4,7 @@ This project is about coding C library
 - `ft_isalpha` - Check if it is character or not including upper case and lower case
 - `ft_isdigit` - Check for number
 - `ft_isascii` - Check for ASCII
-- `ft_isalnum` - Check number and alphabet only (including Upper case and Lower case)
+- `ft_isalnum` - Check number or alphabet only (including Upper case and Lower case)
 - `ft_isprint` - Check for printable character 
 - `ft_toupper` - Convert to uppercase
 - `ft_tolower` - Convert to Lowercase
