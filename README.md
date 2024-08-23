@@ -15,3 +15,4 @@ This project is about coding C library
 - `ft_strlcpy` - Copy sring
 - `ft_strchr` - locate the first character that seen and print out the rest
 - `ft_strrchr` - locate the last character that seen and print the rest 
+- `ft_strncmp` - compare string and returns an integer (positive, negative, zero)
