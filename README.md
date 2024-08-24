@@ -23,8 +23,8 @@ This project is about coding C library
 ---
 
 Resource:
-https://42-cursus.gitbook.io/guide/rank-00/libft/
-https://github.com/48d31kh413k/1337-Libft-42/blob/main/libft.h
-https://github.com/piolows/libft/blob/main/README.md
-https://github.com/pasqualerossi/Libft/blob/libft/ft_strrchr.c
-https://www.asidesigned.com/project-libft.html
+- https://42-cursus.gitbook.io/guide/rank-00/libft/
+- https://github.com/48d31kh413k/1337-Libft-42/blob/main/libft.h
+- https://github.com/piolows/libft/blob/main/README.md
+- https://github.com/pasqualerossi/Libft/blob/libft/ft_strrchr.c
+- https://www.asidesigned.com/project-libft.html
