@@ -19,6 +19,9 @@ This project is about coding C library
 - `ft_memcpy` - Copy a block of data from one memory address to another memory address 
 - `ft_memmove` - 
 - `ft_strlcat` - Concatenate two string together 
+- `ft_memchr` - 
+- `ft_memcmp` - 
+- `ft_strnstc` - 
 
 ---
 
