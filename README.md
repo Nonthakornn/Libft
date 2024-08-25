@@ -17,8 +17,8 @@ This project is about coding C library
 - `ft_strrchr` - locate the last character that seen and print the rest 
 - `ft_strncmp` - Compare string and returns an integer (positive, negative, zero)
 - `ft_memcpy` - Copy a block of data from one memory address to another memory address 
-- `ft_memmove` - 
 - `ft_strlcat` - Concatenate two string together 
+- `ft_memmove` - 
 - `ft_memchr` - 
 - `ft_memcmp` - 
 - `ft_strnstc` - 
