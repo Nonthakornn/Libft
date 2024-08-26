@@ -20,9 +20,9 @@ This project is about coding C library
 - `ft_strlcat` - Concatenate two string together.
 - `ft_memcpy` - Copy a block of data from one memory address to another memory address .
 - `ft_memmove` - Does the same thing as [`ft_memcpy`] both string can overlab in memory and this fucntion does not overwrite the string when makeing the copy.
-- `ft_memchr` - Work the same as [`ft_strchr`], the different is that memchr work with byte string (void *) where [`ft_strchr()`] works with 'litteral' strings (char *).
+- `ft_memchr` - Work the same as [`ft_strchr`], the different is that memchr work with byte string (void *) where [`ft_strchr`] works with 'litteral' strings (char *).
   - This means we can send any type of data we want to [`ft_memchr`] and it will work.
-- `ft_memcmp` - Compares byte strings. It works similarly to the [`ft_strncmp()`] function.
+- `ft_memcmp` - Compares byte strings. It works similarly to the [`ft_strncmp`] function.
 - `ft_strnstc` -  Concatenate  strings.
 - `ft_calloc` - Return a pointer to allocate memory. set all the memory bytes to 0.
 - `ft_strdup` - Save a copy of string.
