@@ -1,6 +1,7 @@
 # 42_Cursus
 This project is about coding C library
 
+# Part 1
 - `ft_isalpha` - Check if it is character or not including upper case and lower case
 - `ft_isdigit` - Check for number
 - `ft_isascii` - Check for ASCII
@@ -22,6 +23,8 @@ This project is about coding C library
 - `ft_memchr` - 
 - `ft_memcmp` - 
 - `ft_strnstc` - 
+- `ft_calloc` - Return a pointer to allocate memory. set all the memory bytes to 0
+- `ft_strdup` - Save a copy of string
 
 ---
 
@@ -31,3 +34,4 @@ Resource:
 - https://github.com/piolows/libft/blob/main/README.md
 - https://github.com/pasqualerossi/Libft/blob/libft/ft_strrchr.c
 - https://www.asidesigned.com/project-libft.html
+- https://github.com/portfoliocourses/c-example-code

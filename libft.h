@@ -4,9 +4,9 @@
 
 # include <unistd.h>
 # include <limits.h>
-//Delete later just for testing
 # include <stdio.h>
 # include <stddef.h>
+# include <stdlib.h>
 
 int ft_isalpha(int c);
 int ft_isdigit(int c);
@@ -21,6 +21,7 @@ int ft_strncmp(const char *s1, const char *s2, size_t n);
 
 char *ft_strchr(const char *s, int c);
 char *ft_strrchr(const char *s, int c);
+char *ft_strdup(const char *s1);
 
 size_t  ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);
@@ -31,5 +32,6 @@ void *ft_memcpy(void *dst, const void *src, size_t n);
 void *ft_memmove(void *dst, const void *src, size_t len);
 void *ft_memchr(const void *s, int c, size_t n);
 void ft_bzero(void *s, size_t n);
+void *ft_colloc(size_t count, size_t size);
 
 #endif
