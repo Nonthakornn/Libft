@@ -1,4 +1,5 @@
 #include "libft.h"
+
 // locate byte in byte string
 
 void *ft_memchr(const void *s, int c, size_t n)
@@ -19,3 +20,17 @@ void *ft_memchr(const void *s, int c, size_t n)
     }
     return NULL;
 }
+
+/*
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    printf("Test de ft_memchr : \n");
+	if (memchr("source", 'r', 2) == ft_memchr("source", 'r', 2) && !strcmp(memchr("source", 'r', 5), ft_memchr("source", 'r', 5)))
+		printf("OK\n");
+	else
+		printf("Failed.\n");
+}
+*/
