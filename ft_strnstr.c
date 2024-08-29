@@ -1,4 +1,5 @@
 #include "libft.h"
+#include "ft_strlen.c"
 
 char *ft_strnstr(const char *str, const char *sub, size_t len)
 {
@@ -8,12 +9,7 @@ char *ft_strnstr(const char *str, const char *sub, size_t len)
      
      str_ptr = (char *) str;
      sub_ptr = (char *) sub;
-     sub_len = 0; // length of substring
-     while (*sub != '\0')
-     {
-          sub_len++;
-          sub++;
-     }
+     sub_len = ft_strlen(sub); // length of substring
 
      // No substring to search, return string.
      if (sub_len == 0)
