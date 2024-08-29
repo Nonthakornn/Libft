@@ -14,16 +14,16 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
     return (0);
 }
 
-int main ()
-{
-    const char *s1;
-    const char *s2;
-    size_t n = 5;
+// int main ()
+// {
+//     const char *s1;
+//     const char *s2;
+//     size_t n = 5;
 
-    s1 = "Hello";
-    s2 = "Hella";
+//     s1 = "Hello";
+//     s2 = "Hella";
 
-    int result = ft_strncmp(s1, s2, n);
-    printf("%d", result);
+//     int result = ft_strncmp(s1, s2, n);
+//     printf("%d", result);
 
-}
+// }

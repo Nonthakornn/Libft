@@ -12,6 +12,7 @@ This project is about coding C library
 - `ft_atoi` - Convert ASCII string to integer (Consider about white space, sign and number).
   - example - 123abc --> 123, abc132 --> 0, 1a2b3x --> 1
 - `ft_strlen` - Count String length.
+- `ft_strlcat` - Concatenate two string together.
 ---
 - `ft_memset` - Function that we can use to set a whole block of memory to a particular value (useful function for efficiently initializing or resetting memory).
 - `ft_bzero` - Writes n zeroed bytes to the string s
@@ -29,10 +30,7 @@ This project is about coding C library
 - `ft_strncmp` - Compare string and returns an integer (positive, negative, zero).
 - `ft_memcmp` - Compares byte strings. It works similarly to the [`ft_strncmp`] function.
 ---
-- `ft_strlcat` - Concatenate two string together.
-- `ft_strnstc` -  Concatenate  strings.
----
-
+- `ft_strnstr` -  Locate a substring in a string
 - `ft_calloc` - Return a pointer to allocate memory. set all the memory bytes to 0.
 - `ft_strdup` - Save a copy of string.
 
