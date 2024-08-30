@@ -1,45 +1,36 @@
 #include "libft.h"
 #include "ft_strlen.c"
 
-char *ft_strnstr(const char *str, const char *sub, size_t len)
+char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-     char *str_ptr;
-     char *sub_ptr;
-     size_t sub_len;
+     size_t needle_len;
      
-     str_ptr = (char *) str;
-     sub_ptr = (char *) sub;
-     sub_len = ft_strlen(sub); // length of substring
+     needle_len = ft_strlen(needle);
 
-     // No substring to search, return string.
-     if (sub_len == 0)
-          return (char *) str;
-     // len is 0, return null.
+     if (needle_len == 0)
+          return (char *) haystack;
      if (len == 0)
           return NULL;
 
-     
-     while (len >= sub_len)
+     while (len >= needle_len)
      {
-          char *temp_str;
-          char *temp_sub;
+          char *haystack_ptr;
+          char *needle_ptr;
+          
+          haystack_ptr = (char *)haystack;
+          needle_ptr = (char *)needle;
 
-          temp_str = str_ptr;
-          temp_sub = sub_ptr;
-
-          while (*temp_str == *temp_sub)
+          while (*haystack_ptr == *needle_ptr)
           {
-               temp_str++;
-               temp_sub++;
-               if (*temp_sub == '\0')
-                    return str_ptr;
+               haystack_ptr++;
+               needle_ptr++;
+               if (*needle_ptr == '\0')
+                    return (char *) haystack;
           }
-          str_ptr++;
+          haystack++;
           len--;
      }
-
      return NULL;
-
 }
 
 
