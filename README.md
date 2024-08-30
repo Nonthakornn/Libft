@@ -36,6 +36,10 @@ This project is about coding C library
 
 
 # Part 2
+- `ft_split`
+- `ft_strtrim`
+- `ft_strjoin`
+- `ft_substr`
 
 ---
 
