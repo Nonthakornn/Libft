@@ -1,5 +1,5 @@
 #include "libft.h"
-#include "ft_strlen.c"
+
 
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
