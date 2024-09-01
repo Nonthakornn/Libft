@@ -34,12 +34,15 @@ This project is about coding C library
 - `ft_calloc` - Return a pointer to allocate memory. set all the memory bytes to 0.
 - `ft_strdup` - Save a copy of string.
 
-
 # Part 2
+- `ft_substr` 
+- `ft_strjoin`
 - `ft_split`
 - `ft_strtrim`
-- `ft_strjoin`
-- `ft_substr`
+- `ft_split`
+- `ft_itoa`
+- `ft_strmapi`
+- `ft_striteri`
 
 ---
 
