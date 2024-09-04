@@ -1,4 +1,4 @@
-#include "libc.h"
+#include "libft.h"
 
 int ft_isprint(int c)
 {
@@ -6,9 +6,15 @@ int ft_isprint(int c)
         return (1);
     return (0);
 }
-
+// #include <string.h>
 // int main()
 // {
-//     int result = ft_isprint('a');
-//     printf("The result is %d", result);
+//     char *printable = "!#$\%&'()*+,-./:;?@[\\]^_`{|}~ ";
+//     int i = 0;
+//     while (i < strlen(printable))
+//     {
+//         if(ft_isprint(printable[i]))
+//             printf("%c", printable[i]);
+//         i++;
+//     }
 // }
