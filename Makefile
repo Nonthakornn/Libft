@@ -13,9 +13,9 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft
 OBJ = $(SRC:.c=.o)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(NAME) $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
-all: $(NAME)
+all: $(NAME) clean
 
 clean:
 	rm -f $(OBJ)
@@ -23,4 +23,4 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all
+re: fclean $(NAME)

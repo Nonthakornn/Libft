@@ -3,11 +3,11 @@
 
 static int length(int n);
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *str;
-	int len;
-	int sign;
+	char	*str;
+	int		len;
+	int		sign;
 
 	len = length(n);
 	sign = 1;
@@ -33,7 +33,14 @@ char *ft_itoa(int n)
 	return (str);
 }
 
-static 
+// static char minus_sign()
+// {
+// 	if (n < 0)
+// 	{
+// 		sign = -1;
+// 		n = -n;
+// 	}
+// }
 
 static int length(int n)
 {
