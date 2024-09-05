@@ -1,24 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: warisac <warisac@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/05 15:05:50 by warisac           #+#    #+#             */
+/*   Updated: 2024/09/05 15:20:31 by warisac          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-// 32-bit signed integer:
-//     INT_MAX: 2,147,483,647 
-//     INT_MIN: 2,147,483,648 
-
-// 64-bit signed integer:
-// 	INT_MAX: 9,223,372,036,854,775,807 
-// 	INT_MIN: -9,223,372,036,854,775,808 
-
-
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int i;
-	int res;
-	int sign;
+	int	i;
+	int	res;
+	int	sign;
 
 	i = 0;
 	sign = 1;
 	res = 0;
-
 	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	if (str[i] == '-')
@@ -34,7 +36,6 @@ int ft_atoi(const char *str)
 		i++;
 	}
 	return (res * sign);
-
 }
 
 // int main()
