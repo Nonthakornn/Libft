@@ -1,54 +1,66 @@
-#include "libft.h"
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: warisac <warisac@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/07 14:29:25 by warisac           #+#    #+#             */
+/*   Updated: 2024/09/07 21:46:57 by warisac          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static int length(int n);
+#include "libft.h"
+
+static int	length(int n);
+static char	*pre_itoa(int len);
 
 char	*ft_itoa(int n)
 {
 	char	*str;
 	int		len;
-	int		sign;
+	int		i;
+	long	nbr;
 
+	nbr = n;
 	len = length(n);
-	sign = 1;
-	str = (char *) malloc((len + 1) * sizeof(char));
+	str = pre_itoa(len);
 	if (str == NULL)
 		return (NULL);
+	if (nbr < 0)
+		nbr = -nbr;
+
+	i = len - 1;
+	while (nbr != 0)
+	{
+		str[i] = ((nbr % 10) + 48);
+		nbr = nbr / 10;
+		i--;
+	}
 	if (n < 0)
-	{
-		sign = -1;
-		n = -n;
-	}
-	str[len] = '\0';
-	while (len-- > 0)
-	{
-		if (len == 0 && sign == -1)
-			str[len] = '-';
-		else
-		{
-			str[len] = (n % 10) + '0';
-			n /= 10;
-		}
-	}
+		str[0] = '-';
+	str[len] = 0;
 	return (str);
 }
 
-// static char minus_sign()
-// {
-// 	if (n < 0)
-// 	{
-// 		sign = -1;
-// 		n = -n;
-// 	}
-// }
-
-static int length(int n)
+static char	*pre_itoa(int len) //Allocate memory.
 {
-	int len;
+	char	*str;
+
+	str = (char *) malloc((len + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	str[0] = '0';
+	return (str);
+}
+
+static int	length(int n) //Calculate the length of n.
+{
+	int	len;
 
 	len = 0;
 	if (n == 0)
-		return 1;
+		return (1);
 	if (n < 0)
 	{
 		n = -n;
@@ -62,11 +74,14 @@ static int length(int n)
 	return (len);
 }
 
-int main() {
-	int n = -123;
-	char *str = ft_itoa(n);
-	if (str != NULL)
-		printf("%s\n", str);  // Output: -123
-	free(str);
-	return 0;
-}
+// int main(void)
+// {
+// 	printf("\nTest de ft_itoa :\n");
+// 	printf("0 : %s\n", ft_itoa(0));
+// 	printf("1 : %s\n", ft_itoa(1));
+// 	printf("-1 : %s\n", ft_itoa(-1));
+// 	printf("234 : %s\n", ft_itoa(234));
+// 	printf("-5689 : %s\n", ft_itoa(-5689));
+// 	printf("2147483647 : %s\n", ft_itoa(2147483647));
+// 	printf("-2147483648 : %s\n", ft_itoa(-2147483648));
+// }
