@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: warisac <warisac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/04 20:49:48 by warcharo          #+#    #+#             */
-/*   Updated: 2024/09/08 03:06:20 by warisac          ###   ########.fr       */
+/*   Created: 2024/09/08 02:50:05 by warisac           #+#    #+#             */
+/*   Updated: 2024/09/08 03:02:07 by warisac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned char	*tmp_dst;
-	unsigned char	*tmp_src;
-
-	if (dst == (void *)0 && src == (void *)0)
-		return (dst);
-	tmp_dst = (unsigned char *) dst;
-	tmp_src = (unsigned char *) src;
-	while (n > 0)
+	if (n == -2147483648)
+		write(fd, "-2147483648", 11);
+	else if (n < 0)
 	{
-		*(tmp_dst++) = *(tmp_src)++;
-		n--;
+		write(fd, "-", 1);
+		n = -n;
+		ft_putnbr_fd(n, fd);
 	}
-	return (dst);
+	else
+	{
+		if (n > 9)
+		{
+			ft_putnbr_fd(n / 10, fd);
+			ft_putnbr_fd(n % 10, fd);
+		}
+		else
+		{
+			n += 48;
+			write(fd, &n, 1);
+		}
+	}
 }
