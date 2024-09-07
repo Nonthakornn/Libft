@@ -6,30 +6,31 @@
 /*   By: warisac <warisac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 14:29:25 by warisac           #+#    #+#             */
-/*   Updated: 2024/09/07 21:46:57 by warisac          ###   ########.fr       */
+/*   Updated: 2024/09/08 01:42:24 by warisac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int	length(int n);
-static char	*pre_itoa(int len);
+static char	*allocate_mem(int len);
+static char	*int_min(void);
 
 char	*ft_itoa(int n)
 {
 	char	*str;
+	long	nbr;
 	int		len;
 	int		i;
-	long	nbr;
 
 	nbr = n;
 	len = length(n);
-	str = pre_itoa(len);
+	str = allocate_mem(len);
 	if (str == NULL)
 		return (NULL);
 	if (nbr < 0)
 		nbr = -nbr;
-
 	i = len - 1;
 	while (nbr != 0)
 	{
@@ -43,7 +44,7 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-static char	*pre_itoa(int len) //Allocate memory.
+static char	*allocate_mem(int len) //Allocate memory.
 {
 	char	*str;
 
@@ -83,5 +84,4 @@ static int	length(int n) //Calculate the length of n.
 // 	printf("234 : %s\n", ft_itoa(234));
 // 	printf("-5689 : %s\n", ft_itoa(-5689));
 // 	printf("2147483647 : %s\n", ft_itoa(2147483647));
-// 	printf("-2147483648 : %s\n", ft_itoa(-2147483648));
 // }
