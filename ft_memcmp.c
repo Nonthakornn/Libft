@@ -6,7 +6,7 @@
 /*   By: warisac <warisac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 02:06:38 by warisac           #+#    #+#             */
-/*   Updated: 2024/09/08 02:07:41 by warisac          ###   ########.fr       */
+/*   Updated: 2024/09/08 04:17:37 by warisac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	c1 = (unsigned char *) s1;
 	c2 = (unsigned char *) s2;
-
 	while (n > 0)
 	{
 		if ((*c1 != *c2))

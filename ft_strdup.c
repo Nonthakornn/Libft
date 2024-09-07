@@ -1,29 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: warisac <warisac@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/08 03:51:08 by warisac           #+#    #+#             */
+/*   Updated: 2024/09/08 03:54:09 by warisac          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <stdlib.h>
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-    char *duplicate;
-    int i;
+	char	*dup;
+	int		i;
 
-    duplicate = (char *) malloc(ft_strlen(s) + 1);
-    i = 0;
-
-    while (s[i])
-    {
-        duplicate[i] = s[i];
-        i++;
-    }
-    duplicate[i] = '\0';
-
-    return (duplicate);
+	dup = (char *) malloc(ft_strlen(s) + 1);
+	if (!dup)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		dup[i] = s[i];
+		i++;
+	}
+	dup[i] = '\0';
+	return (dup);
 }
-
-// int main(void)
-// {
-//     char *ptr;
-//     printf("\nTest de ft_strdup :\n");
-// 	ptr = ft_strdup("matcha latte");
-// 	printf("'matcha latte' : %s\n", ptr);
-// 	free(ptr);
-// }

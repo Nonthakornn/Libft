@@ -6,12 +6,11 @@
 /*   By: warisac <warisac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:52:43 by warcharo          #+#    #+#             */
-/*   Updated: 2024/09/07 14:27:41 by warisac          ###   ########.fr       */
+/*   Updated: 2024/09/08 03:36:00 by warisac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	word_count(const char *str, char c);
 static char	*fill_word(const char *str, int start, int end);
@@ -67,7 +66,7 @@ static int	word_count(const char *str, char c) //Count the words in a string.
 	return (count);
 }
 
-static char	*fill_word(const char *str, int start, int end) //Allocate and fill space for one word.
+static char	*fill_word(const char *str, int start, int end) //Allocate and fill.
 {
 	char	*word;
 	int		i;
@@ -98,54 +97,3 @@ static void	ft_free(char **str_array, int count) //Free the array
 	}
 	free(str_array);
 }
-
-// int main(void)
-// {
-// 	printf("\nTest de ft_split :\n");
-// 	char **res;
-// 	printf("Chaine s : 'bonjour a tous', separateur c : ' ', resultat :\n");
-// 	res = ft_split("bonjour a tous", ' ');
-// 	int i = 0;
-// 	while (res[i])
-// 	{
-// 		printf("'%s'\n", res[i]);
-// 		i++;
-// 	}
-// 	ft_free(res, i);
-// 	printf("Chaine s : ' bonjour a tous ', separateur c : ' ', resultat :\n");
-// 	res = ft_split(" bonjour a tous ", ' ');
-// 	i = 0;
-// 	while (res[i])
-// 	{
-// 		printf("'%s'\n", res[i]);
-// 		i++;
-// 	}
-// 	ft_free(res, i);
-// 	printf("Chaine s : '   ', separateur c : ' ', resultat :\n");
-// 	res = ft_split("   ", ' ');
-// 	i = 0;
-// 	while (res[i])
-// 	{
-// 		printf("'%s'\n", res[i]);
-// 		i++;
-// 	}
-// 	ft_free(res, i);
-// 	printf("Chaine s : ' d  ', separateur c : ' ', resultat :\n");
-// 	res = ft_split(" d  ", ' ');
-// 	i = 0;
-// 	while (res[i])
-// 	{
-// 		printf("'%s'\n", res[i]);
-// 		i++;
-// 	}
-// 	ft_free(res, i);
-// 	printf("Chaine s : 'nosep', separateur c : ' ', resultat :\n");
-// 	res = ft_split("nosep", ' ');
-// 	i = 0;
-// 	while (res[i])
-// 	{
-// 		printf("'%s'\n", res[i]);
-// 		i++;
-// 	}
-// 	ft_free(res, i);
-// }

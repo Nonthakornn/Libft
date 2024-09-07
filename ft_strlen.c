@@ -1,20 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: warisac <warisac@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/08 03:58:33 by warisac           #+#    #+#             */
+/*   Updated: 2024/09/08 03:59:15 by warisac          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-size_t ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while(str[i])
-    {
-        i++;
-    }
-    return i;
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
-
-
-// int main()
-// {
-//     int result = ft_strlen("asdasdd");
-//     printf("%d", result);
-// }
