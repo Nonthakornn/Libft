@@ -6,16 +6,14 @@
 /*   By: warisac <warisac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 14:29:25 by warisac           #+#    #+#             */
-/*   Updated: 2024/09/08 01:42:24 by warisac          ###   ########.fr       */
+/*   Updated: 2024/09/08 01:49:46 by warisac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	length(int n);
 static char	*allocate_mem(int len);
-static char	*int_min(void);
 
 char	*ft_itoa(int n)
 {

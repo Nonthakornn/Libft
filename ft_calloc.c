@@ -6,12 +6,11 @@
 /*   By: warisac <warisac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 15:20:47 by warisac           #+#    #+#             */
-/*   Updated: 2024/09/05 15:24:45 by warisac          ###   ########.fr       */
+/*   Updated: 2024/09/08 01:53:20 by warisac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	*ft_calloc(size_t nitems, size_t size)
 {
