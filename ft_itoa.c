@@ -3,54 +3,55 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: warisac <warisac@student.42.fr>            +#+  +:+       +#+        */
+/*   By: warcharo <warcharo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 14:29:25 by warisac           #+#    #+#             */
-/*   Updated: 2024/09/08 01:49:46 by warisac          ###   ########.fr       */
+/*   Updated: 2024/09/08 14:45:03 by warcharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static int	length(int n);
-static char	*allocate_mem(int len);
+static char	*int2char(char *str, int n);
+
+static char	*int2char(char *str, int n)
+{
+	int	i;
+	int	is_negative;
+
+	i = length(n);
+	str[i--] = '\0';
+	is_negative = (n < 0);
+	if (is_negative)
+	{
+		n = -n;
+		str[0] = '-';
+	}
+	if (n == 0)
+	{
+		str[i] = '0';
+	}
+	while (n > 0)
+	{
+		str[i--] = (n % 10) + '0';
+		n /= 10;
+	}
+	return (str);
+}
 
 char	*ft_itoa(int n)
 {
 	char	*str;
-	long	nbr;
-	int		len;
-	int		i;
 
-	nbr = n;
-	len = length(n);
-	str = allocate_mem(len);
-	if (str == NULL)
-		return (NULL);
-	if (nbr < 0)
-		nbr = -nbr;
-	i = len - 1;
-	while (nbr != 0)
-	{
-		str[i] = ((nbr % 10) + 48);
-		nbr = nbr / 10;
-		i--;
-	}
-	if (n < 0)
-		str[0] = '-';
-	str[len] = 0;
-	return (str);
-}
-
-static char	*allocate_mem(int len) //Allocate memory.
-{
-	char	*str;
-
-	str = (char *) malloc((len + 1) * sizeof(char));
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	if (n == 0)
+		return (ft_strdup("0"));
+	str = malloc(sizeof(char) * (length(n) + 1));
 	if (!str)
 		return (NULL);
-	str[0] = '0';
-	return (str);
+	return (int2char(str, n));
 }
 
 static int	length(int n) //Calculate the length of n.
