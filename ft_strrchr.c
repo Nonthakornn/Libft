@@ -6,7 +6,7 @@
 /*   By: warcharo <warcharo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:44:37 by warcharo          #+#    #+#             */
-/*   Updated: 2024/09/08 18:44:39 by warcharo         ###   ########.fr       */
+/*   Updated: 2024/09/08 21:07:46 by warcharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strrchr(const char *s, int c)
 			ptr = (char *) &s[i];
 		i++;
 	}
-	if (s[i] == c)
+	if (cc == '\0')
 		ptr = (char *) &s[i];
 	return (ptr);
 }
