@@ -6,7 +6,7 @@
 /*   By: warcharo <warcharo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:42:03 by warcharo          #+#    #+#             */
-/*   Updated: 2024/09/08 18:42:05 by warcharo         ###   ########.fr       */
+/*   Updated: 2024/09/08 19:18:03 by warcharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_calloc(size_t nitems, size_t size)
 
 	i = 0;
 	array = malloc(nitems * size);
+	if (!array)
+		return (NULL);
 	while (i < nitems * size)
 	{
 		array[i] = 0;
