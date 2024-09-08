@@ -21,14 +21,14 @@ char	*ft_strrchr(const char *s, int c)
 	cc = (char) c;
 	ptr = NULL;
 	i = 0;
-	while (s[i])
+	while (s[i] != '\0')
 	{
 		if (s[i] == cc)
 			ptr = (char *) &s[i];
 		i++;
 	}
-	if (s[i] == c)
-		ptr = (char *) &s[i];
+	if (cc == '\0')
+		ptr = (char *)&s[i];
 	return (ptr);
 }
 
