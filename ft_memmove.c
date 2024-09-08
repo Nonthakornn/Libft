@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: warisac <warisac@student.42.fr>            +#+  +:+       +#+        */
+/*   By: warcharo <warcharo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 03:37:16 by warisac           #+#    #+#             */
-/*   Updated: 2024/09/08 03:44:12 by warisac          ###   ########.fr       */
+/*   Updated: 2024/09/08 14:30:23 by warcharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 	{
-		while (i++ < len)
+		while (i < len)
+		{
 			c_dst[i] = c_src[i];
+			i++;
+		}
 	}
 	return (dst);
 }
