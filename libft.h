@@ -6,7 +6,7 @@
 /*   By: nchencha <nchencha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 19:56:19 by nchencha          #+#    #+#             */
-/*   Updated: 2024/09/07 23:25:54 by nchencha         ###   ########.fr       */
+/*   Updated: 2024/09/08 14:02:25 by nchencha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
-void	*ft_colloc(size_t count, size_t size);
+void	*ft_calloc(size_t count, size_t size);
 
 //Part 2
 char	*ft_substr(char const *s, unsigned int start, size_t len);

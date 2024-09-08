@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nchencha <nchencha@student.42.fr>          #+#  +:+       +#+        */
+/*   By: nchencha <nchencha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-09-04 12:54:43 by nchencha          #+#    #+#             */
-/*   Updated: 2024-09-04 12:54:43 by nchencha         ###   ########.fr       */
+/*   Created: 2024/09/04 12:54:43 by nchencha          #+#    #+#             */
+/*   Updated: 2024/09/08 14:17:57 by nchencha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char	*tmp_dst;
 	unsigned char	*tmp_src;
 
-	if (dst == (void *)0 && src == (void *)0)
-		return (dst);
+	if (!dst || !src)
+		return (NULL);
 	tmp_dst = (unsigned char *) dst;
 	tmp_src = (unsigned char *) src;
 	while (n > 0)

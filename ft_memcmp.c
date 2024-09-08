@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nchencha <nchencha@student.42.fr>          #+#  +:+       +#+        */
+/*   By: nchencha <nchencha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-09-04 13:22:43 by nchencha          #+#    #+#             */
-/*   Updated: 2024-09-04 13:22:43 by nchencha         ###   ########.fr       */
+/*   Created: 2024/09/04 13:22:43 by nchencha          #+#    #+#             */
+/*   Updated: 2024/09/08 14:11:00 by nchencha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	{
 		if ((unsigned char) str1[i] != (unsigned char) str2[i])
 			return ((unsigned char) str1[i] - (unsigned char) str2[i]);
+		i++;
 	}
 	return (0);
 }
