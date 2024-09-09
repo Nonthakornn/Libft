@@ -6,7 +6,7 @@
 /*   By: warcharo <warcharo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:43:37 by warcharo          #+#    #+#             */
-/*   Updated: 2024/09/08 18:43:39 by warcharo         ###   ########.fr       */
+/*   Updated: 2024/09/10 00:33:40 by warcharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	**ft_split(char const *s, char c)
 	return (array);
 }
 
-static int	word_count(const char *str, char c) //Count the words in a string.
+static int	word_count(const char *str, char c) //Count characters for malloc.
 {
 	int	count;
 	int	split;
@@ -71,7 +71,7 @@ static char	*fill_word(const char *str, int start, int end) //Allocate and fill.
 	char	*word;
 	int		i;
 
-	word = (char *) malloc((end - start + 1) * sizeof(char));
+	word = malloc((end - start + 1) * sizeof(char));
 	i = 0;
 	if (!word)
 		return (NULL);
@@ -85,7 +85,7 @@ static char	*fill_word(const char *str, int start, int end) //Allocate and fill.
 	return (word);
 }
 
-static void	ft_free(char **str_array, int count) //Free the array
+static void	ft_free(char **str_array, int count) //Free elements, then array.
 {
 	int	i;
 
