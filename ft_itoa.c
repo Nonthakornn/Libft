@@ -6,7 +6,7 @@
 /*   By: warcharo <warcharo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:42:36 by warcharo          #+#    #+#             */
-/*   Updated: 2024/09/08 18:42:38 by warcharo         ###   ########.fr       */
+/*   Updated: 2024/09/10 02:27:03 by warcharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,20 @@
 
 static int	length(int n);
 static char	*int2char(char *str, int n);
+
+char	*ft_itoa(int n)
+{
+	char	*str;
+
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	if (n == 0)
+		return (ft_strdup("0"));
+	str = malloc(sizeof(char) * (length(n) + 1));
+	if (!str)
+		return (NULL);
+	return (int2char(str, n));
+}
 
 static char	*int2char(char *str, int n)
 {
@@ -29,29 +43,13 @@ static char	*int2char(char *str, int n)
 		str[0] = '-';
 	}
 	if (n == 0)
-	{
 		str[i] = '0';
-	}
 	while (n > 0)
 	{
 		str[i--] = (n % 10) + '0';
 		n /= 10;
 	}
 	return (str);
-}
-
-char	*ft_itoa(int n)
-{
-	char	*str;
-
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	if (n == 0)
-		return (ft_strdup("0"));
-	str = malloc(sizeof(char) * (length(n) + 1));
-	if (!str)
-		return (NULL);
-	return (int2char(str, n));
 }
 
 static int	length(int n) //Calculate the length of n.
