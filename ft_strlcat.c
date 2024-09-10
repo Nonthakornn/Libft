@@ -6,7 +6,7 @@
 /*   By: warcharo <warcharo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:44:04 by warcharo          #+#    #+#             */
-/*   Updated: 2024/09/08 18:44:06 by warcharo         ###   ########.fr       */
+/*   Updated: 2024/09/10 11:59:22 by warcharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	if (dst_len == dstsize)
 		return (dstsize + src_len);
 	if (src_len < dstsize - dst_len)
-		ft_memcpy(dst + dst_len, src, src_len +1);
+		ft_memcpy(dst + dst_len, src, src_len + 1);
 	else
 	{
 		ft_memcpy(dst + dst_len, src, dstsize - dst_len -1);
-		dst[dstsize -1] = '\0';
+		dst[dstsize - 1] = '\0';
 	}
 	return (dst_len + src_len);
 }
