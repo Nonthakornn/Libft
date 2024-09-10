@@ -1,9 +1,0 @@
-note
-test.c
-test
-*.exe
-*.o
-*.vscode
-a.out
-*.o
-.DS_Store

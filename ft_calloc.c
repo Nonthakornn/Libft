@@ -6,7 +6,7 @@
 /*   By: nchencha <nchencha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 13:26:40 by nchencha          #+#    #+#             */
-/*   Updated: 2024/09/10 17:05:22 by nchencha         ###   ########.fr       */
+/*   Updated: 2024/09/10 21:14:11 by nchencha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,15 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char	*tmp;
-	size_t			i;
+	void	*ptr;
+	size_t	total;
 
-	i = 0;
-	tmp = malloc(count * size);
-	if (!tmp)
+	if (count > 0 && SIZE_MAX / count < size)
 		return (NULL);
-	while (i < count * size)
-	{
-		tmp[i] = 0;
-		i++;
-	}
-	return (tmp);
+	total = count * size;
+	ptr = malloc(total);
+	if (!ptr)
+		return (NULL);
+	ft_bzero (ptr, total);
+	return (ptr);
 }
