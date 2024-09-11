@@ -6,7 +6,7 @@
 /*   By: nchencha <nchencha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 12:59:07 by nchencha          #+#    #+#             */
-/*   Updated: 2024/09/08 19:13:38 by nchencha         ###   ########.fr       */
+/*   Updated: 2024/09/11 15:55:00 by nchencha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,42 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
+
+// #include <string.h>
+// int main() //character
+// {
+// 	char str_overlap[]  =  "Hello, World";
+// 	char str_noverlap[] = "Hello, World" ;
+// 	char str[] =  "Hello, World";
+// 	//Use memmove to copy overlapping memory
+// 	//Copy the string staring from index 0 to 7 (overlaping)
+// 	ft_memmove(str_overlap + 9, str_overlap, 6);
+// 	printf("Result of overlap: %s\n", str_overlap); //Hello, Hello,
+
+// 	ft_memmove(str_noverlap, str_noverlap, 6);
+// 	printf("Result of noverlap: %s\n", str_noverlap);
+
+// 	memmove(str + 7, str, 6);
+// 	printf("Result: %s\n", str);
+// 	return (0);
+// }
+
+// int main() //integer
+// {
+// 	int source[10] = {1,2,3,4,5,6,7,8,9,10};
+// 	int destination[10];
+
+// 	//Not overlap
+// 	// ft_memmove(destination, source, sizeof(int) * 10);
+// 	// for (int i = 0; i < 10; i++)
+// 	// 	printf("destination[%d]=%d\n", i, destination[i]);
+// 	// for (int i = 0; i < 10; i++)
+// 	// 	printf("source[%d]=%d\n", i, source[i]);
+// 	//Overlap
+// 	ft_memmove(destination, source, sizeof(int) * 10);
+// 	//ft_memmove(source + 2, source, sizeof(int) * 8);
+// 	for (int i = 0; i < 10; i++)
+// 		printf("destination[%d]=%d\n", i, destination[i]);
+// 	for (int i = 0; i < 10; i++)
+// 		printf("source[%d]=%d\n", i, source[i]);
+// }

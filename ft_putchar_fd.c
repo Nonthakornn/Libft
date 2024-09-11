@@ -6,7 +6,7 @@
 /*   By: nchencha <nchencha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 23:03:06 by nchencha          #+#    #+#             */
-/*   Updated: 2024/09/07 23:04:17 by nchencha         ###   ########.fr       */
+/*   Updated: 2024/09/11 16:44:14 by nchencha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,8 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
+
+// int main()
+// {
+// 	ft_putchar_fd('n', 1);
+// }

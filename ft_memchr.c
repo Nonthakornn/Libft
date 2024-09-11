@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nchencha <nchencha@student.42.fr>          #+#  +:+       +#+        */
+/*   By: nchencha <nchencha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-09-04 13:13:35 by nchencha          #+#    #+#             */
-/*   Updated: 2024-09-04 13:13:35 by nchencha         ###   ########.fr       */
+/*   Created: 2024/09/04 13:13:35 by nchencha          #+#    #+#             */
+/*   Updated: 2024/09/11 16:30:52 by nchencha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,20 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
+// #include <string.h>
+// int main()
+// {
+// 	char str[] = "Hello, World";
+// 	char *result;
+// 	int c = 87;
+
+// 	result = (char *)ft_memchr(str, c, 13);
+// 	if (result)
+// 	{
+// 		printf("Fount 'W' at position: %ld\n", result - str);
+// 	}
+// 	else
+// 		printf("'W is not found");
+// 	return (0);
+// }

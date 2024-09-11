@@ -6,7 +6,7 @@
 /*   By: nchencha <nchencha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 23:12:55 by nchencha          #+#    #+#             */
-/*   Updated: 2024/09/07 23:25:37 by nchencha         ###   ########.fr       */
+/*   Updated: 2024/09/11 16:45:40 by nchencha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,8 @@ void	ft_putendl_fd(char *str, int fd)
 	}
 	write(fd, "\n", 1);
 }
+
+// int main()
+// {
+// 	ft_putendl_fd("Hello",1);
+// }

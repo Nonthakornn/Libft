@@ -6,7 +6,7 @@
 /*   By: nchencha <nchencha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 12:54:43 by nchencha          #+#    #+#             */
-/*   Updated: 2024/09/08 19:19:57 by nchencha         ###   ########.fr       */
+/*   Updated: 2024/09/11 16:01:43 by nchencha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,22 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
-// int main(void)
+// #include <string.h>
+// int main()
 // {
-//     char  src[] = "abcde";
-//     char dst[20];
+// 	char src[] = "Hello, World!";
+// 	char dst[20];
+// 	char src2[] = "Hello, World!";
+// 	char dst2[20];
 
-//     ft_memcpy(dst, src, sizeof(char) * 3);
-
-//     printf("Source: %s\n", src);
-//     printf("Destination: %s\n", dst);
-//     printf("Size of Destination: %lu\n", sizeof(dst));
-//     return 0;
-
+// 	ft_memcpy(dst, src, 12);
+// 	dst[12] = '\0';
+// 	printf("Source of ft_memcpy: %s\n", src);
+// 	printf("Destination of ft_memcpy: %s\n", dst);
+// 	printf("\n");
+// 	memcpy(dst2, src2, 12);
+// 	dst[12] = 0;
+// 	printf("Source of memcpy: %s\n", src2);
+// 	printf("Destination of memcpy: %s\n", dst2);
+// 	return 0;
 // }

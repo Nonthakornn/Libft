@@ -6,7 +6,7 @@
 /*   By: nchencha <nchencha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 19:26:22 by nchencha          #+#    #+#             */
-/*   Updated: 2024/09/08 18:29:36 by nchencha         ###   ########.fr       */
+/*   Updated: 2024/09/11 22:33:33 by nchencha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // int	main()
 // {
-// 	printf("%s\n", ft_substr("0123456", 3, 10));
+// 	//printf("%s\n", ft_substr("0123456", 8, 4));
+// 	//printf("%s\n", ft_substr("0123456", 0, 4));
+// 	//printf("%s\n", ft_substr("0123456", 5, 4));
+// 	printf("%s\n", ft_substr("0123456", 0, 10));
 // }
