@@ -6,12 +6,13 @@
 /*   By: warcharo <warcharo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:42:58 by warcharo          #+#    #+#             */
-/*   Updated: 2024/09/08 18:43:00 by warcharo         ###   ########.fr       */
+/*   Updated: 2024/09/12 03:25:24 by warcharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Copy n bytes from src to dst.
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char	*tmp_dst;
@@ -28,3 +29,18 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+
+// #include <string.h>
+
+// int main(void)
+// {
+// 	char s[100] = "aaaaa";
+// 	char sbis[100] = "aaaaa";
+	
+// 	strcpy(sbis, s);
+// 	if (!strcmp(memcpy(s, "source", 3), ft_memcpy(sbis, "source", 3))
+// 		&& !strcmp(memcpy(s, "2emesource", 8), ft_memcpy(sbis, "2emesource", 8)))
+// 		printf("OK\n");
+// 	else
+// 		printf("Failed : expected '%s', got '%s'.\n", s, sbis);
+// }

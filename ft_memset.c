@@ -6,12 +6,13 @@
 /*   By: warcharo <warcharo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:43:12 by warcharo          #+#    #+#             */
-/*   Updated: 2024/09/08 18:43:14 by warcharo         ###   ########.fr       */
+/*   Updated: 2024/09/12 03:31:31 by warcharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Fill len byte of string b with character c.
 void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*tmp_ptr;
@@ -23,4 +24,16 @@ void	*ft_memset(void *b, int c, size_t len)
 		len--;
 	}
 	return (b);
+}
+
+#include <string.h>
+
+int main(void)
+{
+	char s[100] = "aaaaa";
+	char sbis[100] = "aaaaa";
+	if (!strcmp(memset(s, 'z', 3), ft_memset(sbis, 'z', 3)))
+		printf("OK\n");
+	else
+		printf("Failed : expected '%s', got '%s'.\n", s, sbis);
 }

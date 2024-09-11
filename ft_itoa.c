@@ -6,7 +6,7 @@
 /*   By: warcharo <warcharo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:42:36 by warcharo          #+#    #+#             */
-/*   Updated: 2024/09/10 02:27:03 by warcharo         ###   ########.fr       */
+/*   Updated: 2024/09/12 02:57:04 by warcharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 static int	length(int n);
 static char	*int2char(char *str, int n);
 
+// Returns string of integer.
 char	*ft_itoa(int n)
 {
 	char	*str;
@@ -29,6 +30,7 @@ char	*ft_itoa(int n)
 	return (int2char(str, n));
 }
 
+// Convert integer to character.
 static char	*int2char(char *str, int n)
 {
 	int	i;
@@ -52,7 +54,8 @@ static char	*int2char(char *str, int n)
 	return (str);
 }
 
-static int	length(int n) //Calculate the length of n.
+//Calculate the length of n.
+static int	length(int n)
 {
 	int	len;
 
@@ -74,11 +77,11 @@ static int	length(int n) //Calculate the length of n.
 
 // int main(void)
 // {
-// 	printf("\nTest de ft_itoa :\n");
 // 	printf("0 : %s\n", ft_itoa(0));
 // 	printf("1 : %s\n", ft_itoa(1));
 // 	printf("-1 : %s\n", ft_itoa(-1));
 // 	printf("234 : %s\n", ft_itoa(234));
 // 	printf("-5689 : %s\n", ft_itoa(-5689));
 // 	printf("2147483647 : %s\n", ft_itoa(2147483647));
+// 	printf("-2147483648 : %s\n", ft_itoa(-2147483648));
 // }
