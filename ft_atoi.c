@@ -6,12 +6,13 @@
 /*   By: warcharo <warcharo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:41:42 by warcharo          #+#    #+#             */
-/*   Updated: 2024/09/08 18:41:44 by warcharo         ###   ########.fr       */
+/*   Updated: 2024/09/12 02:20:01 by warcharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Convert ASCII string -> integer
 int	ft_atoi(const char *str)
 {
 	int	i;
@@ -30,7 +31,7 @@ int	ft_atoi(const char *str)
 	}
 	else if (str[i] == '+')
 		i++;
-	while (str[i] != 0 && str[i] >= '0' && str[i] <= '9' )
+	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9' )
 	{
 		res = res * 10 + (str[i] - '0');
 		i++;
@@ -38,9 +39,12 @@ int	ft_atoi(const char *str)
 	return (res * sign);
 }
 
+// #include <stdlib.h>
 // int main()
 // {
-// 	int	result = ft_atoi("123abc");
-// 	printf("The result is %d", result);
+// 	int	result = ft_atoi("  -123abc");
+// 	printf("ft_atoi: %d\n", result);
+// 	int result2 = atoi("  -123abc");
+// 	printf("atoi: %d\n", result);
 // 	return 0;
 // }

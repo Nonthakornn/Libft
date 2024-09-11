@@ -6,7 +6,7 @@
 /*   By: warcharo <warcharo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:42:03 by warcharo          #+#    #+#             */
-/*   Updated: 2024/09/08 19:18:03 by warcharo         ###   ########.fr       */
+/*   Updated: 2024/09/12 02:47:30 by warcharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,10 @@ void	*ft_calloc(size_t nitems, size_t size)
 
 // int main(void)
 // {
-//  printf("\nTest (simple compilation/free) de ft_calloc;\n");
-// 	char *ptr;
-// 	ptr = ft_calloc(5, sizeof(int));
+// 	char *ptr = ft_calloc(5, sizeof(int));
+// 	if (!ptr)
+// 		printf("Memory is not allocated\n");
+// 	else
+// 		printf("Successfully allocated\n");
 // 	free(ptr);
 // }
