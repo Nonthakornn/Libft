@@ -14,16 +14,18 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*ptr;
-	size_t	total;
+	unsigned char	*ptr;
+	size_t			i;
 
-	if (count > 0 && __SIZE_MAX__ / count < size)
-		return (NULL);
-	total = count * size;
-	ptr = malloc(total);
+	i = 0;
+	ptr = malloc(count * size);
 	if (!ptr)
 		return (NULL);
-	ft_bzero (ptr, total);
+	while (i < count * size)
+	{
+		ptr[i] = 0;
+		i++;
+	}
 	return (ptr);
 }
 
@@ -50,3 +52,6 @@ void	*ft_calloc(size_t count, size_t size)
 // 	free(ft_arr);
 // 	free(std_arr);
 // }
+//Over flow
+// if (count > 0 && __SIZE_MAX__ / count < size)
+// 		return (NULL);

@@ -29,3 +29,15 @@ char	*ft_strdup(const char *s1)
 	dest[i] = 0;
 	return (dest);
 }
+// int main() 
+// {
+// 	char *str = "Hello World!";
+// 	char *dup_str;
+
+// 	dup_str = ft_strdup(str);
+// 	printf("Original string %s\n", str);
+// 	printf("Duplicate string: %s\n", dup_str);
+
+// 	free(dup_str);
+// 	return (0);
+// }
