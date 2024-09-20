@@ -12,18 +12,26 @@ SRCS_FILES = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isasc
 		ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
 		ft_putendl_fd.c ft_putnbr_fd.c
 
+BSRCS_FILES = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c \
+			ft_lstadd_back_bonus.c ft_lastdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c \
+			ft_lstmap_bonus.c
+
 OBJ_FILES = $(SRCS_FILES:.c=.o)
+BOBJ_FILES = $(BSRCS_FILES:.c=.o)
 
 all:		$(NAME)
 
 $(NAME):	$(OBJ_FILES)
-			$(AR) $@ $^
+			$(AR) $(NAME) $(OBJ_FILES)
 
 %.o:		%.c
 			$(CC) $(CFLAGS) -c $< -o $@
 
+bonus:		$(OBJ_FILES) $(BOBJ_FILES)
+			$(AR) $(NAME) $(OBJ_FILES) $(BOBJ_FILES)
+
 clean:		
-			$(RM) $(OBJ_FILES)
+			$(RM) $(OBJ_FILES) $(BOBJ_FILES)
 
 fclean:		clean
 			$(RM) $(NAME)
