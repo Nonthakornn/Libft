@@ -27,18 +27,25 @@ t_list	*ft_lstnew(void *content)
 /*
 int main()
 {
-    t_list *newlist = ft_lstnew("a");
+    int value = 10;
+    int value2 = 20;
+    int value3 = 30;
+    t_list *node1 = ft_lstnew(&value);
+    t_list *node2 = ft_lstnew(&value2);
+    t_list *node3 = ft_lstnew(&value3);
 
-    newlist->next = ft_lstnew("b");
-    newlist->next->next = ft_lstnew("c");
+    node1->next= node2; //node1 points to node2
+    node2->next = node3; //node2 points to node3
 
-    t_list *current = newlist;
-    while (current != NULL)
+    t_list *ptr = node1;
+    while (ptr != NULL)
     {
-        printf("%s -> ", (char *) current->content);
-        current = current->next;
+        printf("%d -> ", *(int *)(ptr->content));
+        ptr = ptr->next;
     }
-    printf("\n");
+    free(node1);
+    free(node2);
+    free(node3);
     return (0);
 }
 */
