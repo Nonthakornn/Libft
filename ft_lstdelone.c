@@ -13,7 +13,6 @@ void ft_del(void *content)
     content = 0;
 }
 
-#include "ft_lstnew.c"
 // int main()
 // {
 //     t_list *list = ft_lstnew("a");
