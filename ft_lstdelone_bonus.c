@@ -1,50 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchencha <nchencha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/20 21:27:14 by nchencha          #+#    #+#             */
-/*   Updated: 2024/09/21 08:41:36 by nchencha         ###   ########.fr       */
+/*   Created: 2024/09/21 12:21:21 by nchencha          #+#    #+#             */
+/*   Updated: 2024/09/21 12:42:01 by nchencha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//Counts the number of nodes in a list.
-int	ft_lstsize(t_list *lst)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	int		count;
-	t_list	*ptr;
-
-	count = 0;
-	ptr = lst;
-	while (ptr != NULL)
-	{
-		count++;
-		ptr = ptr->next;
-	}
-	return (count);
+	if (!lst)
+		return ;
+	(*del)(lst->content);
+	free(lst);
 }
 
 /*
 #include "ft_lstnew_bonus.c"
+void del_content(void *content)
+{
+	free(content);
+}
 int main()
 {
-	int value1 = 10;
-	int value2 = 20;
-	
-	t_list *node1 = ft_lstnew(&value1);
-	t_list *node2 = ft_lstnew(&value2);
+	int *value = malloc(sizeof(int));
+	*value = 42;
 
-	node1->next = node2;
-
-	int size = ft_lstsize(node1);
-	printf("Size: %d\n", size);
-
-	free(node1);
-	free(node2);
+	t_list *node = ft_lstnew(value);
+	if (!node)
+	{
+		free(value);
+		return 1;
+	}
+	printf("Node before deletion: %d\n", *(int *)(node->content));
+	ft_lstdelone(node, del_content);
+	printf("Node is deleted");
 	return (0);
 }
 */
