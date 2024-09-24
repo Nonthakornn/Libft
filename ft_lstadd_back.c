@@ -14,22 +14,22 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	current->next = new;
 }
 
-#include "ft_lstnew.c"
-int main(void)
-{
-	t_list	*lst;
+// #include "ft_lstnew.c"
+// int main(void)
+// {
+// 	t_list	*lst;
 
-	lst = ft_lstnew("a");
-	lst->next = ft_lstnew("b");
-	lst->next->next = ft_lstnew("c");
+// 	lst = ft_lstnew("a");
+// 	lst->next = ft_lstnew("b");
+// 	lst->next->next = ft_lstnew("c");
 
-	ft_lstadd_back(&lst, ft_lstnew("d"));
+// 	ft_lstadd_back(&lst, ft_lstnew("d"));
 
-	t_list	*current = lst;
-	while (current != NULL)
-	{
-		printf("%s\n", (char *) current->content);
-		current = current->next;
-	}
-	return (0);
-}
+// 	t_list	*current = lst;
+// 	while (current != NULL)
+// 	{
+// 		printf("%s\n", (char *) current->content);
+// 		current = current->next;
+// 	}
+// 	return (0);
+// }

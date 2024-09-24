@@ -8,10 +8,10 @@ void    ft_lstdelone(t_list *lst, void (*del)(void *))
     free(lst);
 }
 
-void ft_del(void *content)
-{
-    content = 0;
-}
+// void ft_del(void *content)
+// {
+//     content = 0;
+// }
 
 // int main()
 // {
