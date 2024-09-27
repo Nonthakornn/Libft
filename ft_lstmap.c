@@ -6,7 +6,7 @@
 /*   By: warcharo <warcharo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 21:59:28 by warcharo          #+#    #+#             */
-/*   Updated: 2024/09/22 23:41:27 by warcharo         ###   ########.fr       */
+/*   Updated: 2024/09/27 13:25:40 by warcharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,19 +34,20 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (new_list);
 }
 
-
 // void	ft_del(void *content)
 // {
-// 	free(content);
+// 	content = 0;
 // }
 
-// void	*plus_10(void *content)
+// void	*uppercase(void *content)
 // {
-// 	int	*newcontent;
+// 	int	*new_content;
 
-// 	newcontent = malloc(sizeof(int));
-// 	*newcontent = (*(int*)content) + 10;
-// 	return (newcontent);
+// 	new_content = malloc(sizeof(char));
+// 	if (!new_content)
+// 		return (NULL);
+// 	*new_content = (*(char *)content) - 32;
+// 	return (new_content);
 // }
 
 // #include "ft_lstnew.c"
@@ -54,25 +55,22 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // #include "ft_lstadd_back.c"
 // int main()
 // {
-//     int i1 = 1, i2 = 2, i3 = 3;
-// 	t_list	*one = ft_lstnew(&i1);
-//     t_list	*two = ft_lstnew(&i2);
-//     t_list	*three = ft_lstnew(&i3);
+// 	t_list	*n1 = ft_lstnew("a");
+//     t_list	*n2 = ft_lstnew("b");
+//     t_list	*n3 = ft_lstnew("c");
 
-//     one->next = two;
-//     two->next = three;
-//     three->next = NULL;
+// 	n1->next = n2;
+// 	n2->next = n3;
 
-//     t_list		*map;
-// 	map = ft_lstmap(one, &plus_10, &ft_del);
-// 	while (map)
+//     t_list	*map = ft_lstmap(n1, uppercase, ft_del);
+// 	t_list	*map_ptr = map;
+// 	while (map_ptr)
 // 	{
-// 		// if (one->content)
-// 			printf("%i ", *(int*)(map->content));
-// 		map = map->next;
+// 		printf("%c ", *(char *)(map_ptr->content));
+// 		map_ptr = map_ptr->next;
 // 	}
 
-//     ft_lstclear(&one, &ft_del);
+//     ft_lstclear(&n1, &ft_del);
 //     ft_lstclear(&map, &ft_del);
 //     return (0);
 // }

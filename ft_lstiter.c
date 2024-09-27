@@ -6,7 +6,7 @@
 /*   By: warcharo <warcharo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 21:58:52 by warcharo          #+#    #+#             */
-/*   Updated: 2024/09/22 21:58:53 by warcharo         ###   ########.fr       */
+/*   Updated: 2024/09/25 11:20:50 by warcharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-    t_list	*tmp;
+	t_list	*tmp;
 
 	tmp = lst;
-    while (tmp)
-    {
-        f(tmp->content);
-        tmp = tmp->next;
-    }
+	while (tmp)
+	{
+		f(tmp->content);
+		tmp = tmp->next;
+	}
 }

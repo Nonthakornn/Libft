@@ -6,7 +6,7 @@
 /*   By: warcharo <warcharo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:43:03 by warcharo          #+#    #+#             */
-/*   Updated: 2024/09/12 03:28:38 by warcharo         ###   ########.fr       */
+/*   Updated: 2024/09/25 11:24:33 by warcharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,16 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
-#include <string.h>
+// #include <string.h>
 
-int main(void)
-{
-	char s1[] = "string test";
-	char s2[] = "string test";
-	if (!strcmp(memmove(s1, s1 + 3, 5), ft_memmove(s2, s2 + 3, 5)) && !strcmp(memmove(s1 + 3, s1, 5), ft_memmove(s2 + 3, s2, 5)))
-		printf("OK\n");
-	else
-		printf("Failed (tests : ft_memmove(s, s + 3, 5) and ft_memmove(s + 3, s, 5)).\n");
-}
+// int main(void)
+// {
+// 	char s1[] = "string test";
+// 	char s2[] = "string test";
+// 	if (!strcmp(memmove(s1, s1 + 3, 5), ft_memmove(s2, s2 + 3, 5)) 
+// 		&& !strcmp(memmove(s1 + 3, s1, 5), ft_memmove(s2 + 3, s2, 5)))
+// 		printf("OK\n");
+// 	else
+// 		printf("Failed (tests : ft_memmove(s, s + 3, 5) 
+// 		and ft_memmove(s + 3, s, 5)).\n");
+// }

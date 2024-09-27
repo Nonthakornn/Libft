@@ -6,7 +6,7 @@
 /*   By: warcharo <warcharo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:43:12 by warcharo          #+#    #+#             */
-/*   Updated: 2024/09/12 03:31:31 by warcharo         ###   ########.fr       */
+/*   Updated: 2024/09/25 10:46:19 by warcharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ void	*ft_memset(void *b, int c, size_t len)
 	return (b);
 }
 
-#include <string.h>
+// #include <string.h>
 
-int main(void)
-{
-	char s[100] = "aaaaa";
-	char sbis[100] = "aaaaa";
-	if (!strcmp(memset(s, 'z', 3), ft_memset(sbis, 'z', 3)))
-		printf("OK\n");
-	else
-		printf("Failed : expected '%s', got '%s'.\n", s, sbis);
-}
+// int main(void)
+// {
+// 	char s[100] = "aaaaa";
+// 	char sbis[100] = "aaaaa";
+// 	if (!strcmp(memset(s, 'z', 3), ft_memset(sbis, 'z', 3)))
+// 		printf("OK\n");
+// 	else
+// 		printf("Failed : expected '%s', got '%s'.\n", s, sbis);
+// }

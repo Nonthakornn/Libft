@@ -1,15 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: warcharo <warcharo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/25 11:21:22 by warcharo          #+#    #+#             */
+/*   Updated: 2024/09/25 15:31:20 by warcharo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 // Count # of nodes
 int	ft_lstsize(t_list *lst)
 {
-	int	count;
+	t_list	*ptr;
+	int		count;
 
+	ptr = lst;
 	count = 0;
-	while (lst->next != NULL)
+	while (ptr)
 	{
+		ptr = ptr->next;
 		count++;
-		lst = lst->next;
 	}
 	return (count);
 }
@@ -30,6 +44,5 @@ int	ft_lstsize(t_list *lst)
 
 // 	int size = ft_lstsize(list);
 // 	printf("Size of list: %i\n", size);
-
 // 	return (0);
 // }

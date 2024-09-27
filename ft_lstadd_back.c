@@ -1,17 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: warcharo <warcharo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/25 11:18:16 by warcharo          #+#    #+#             */
+/*   Updated: 2024/09/27 13:28:25 by warcharo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*current;
+	t_list	*last_node;
 
-	if (*lst == NULL)
+	if (!lst || !new)
+		return ;
+	last_node = ft_lstlast(*lst);
+	if (!last_node)
 		*lst = new;
-	current = *lst;
-	while (current->next != NULL)
-	{
-		current = current->next;
-	}
-	current->next = new;
+	else
+		last_node->next = new;
 }
 
 // #include "ft_lstnew.c"
