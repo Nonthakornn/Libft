@@ -22,19 +22,23 @@ BOBJ_FILES = $(BSRCS_FILES:.c=.o)
 all:		$(NAME)
 
 $(NAME):	$(OBJ_FILES)
-			$(AR) $(NAME) $(OBJ_FILES)
+			@$(AR) $(NAME) $(OBJ_FILES)
+			@echo "Done building libft"
 
 %.o:		%.c
-			$(CC) $(CFLAGS) -c $< -o $@
+			@$(CC) $(CFLAGS) -c $< -o $@
 
 bonus:		$(OBJ_FILES) $(BOBJ_FILES)
-			$(AR) $(NAME) $(OBJ_FILES) $(BOBJ_FILES)
+			@$(AR) $(NAME) $(OBJ_FILES) $(BOBJ_FILES)
+			@echo "Done building libft_bonus"
 
 clean:		
-			$(RM) $(OBJ_FILES) $(BOBJ_FILES)
+			@$(RM) $(OBJ_FILES) $(BOBJ_FILES)
+			@echo "clean libft"
 
 fclean:		clean
-			$(RM) $(NAME)
+			@$(RM) $(NAME)
+			@echo "fclean libft"
 
 re:			fclean all
 
