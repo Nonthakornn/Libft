@@ -68,3 +68,32 @@ void	*ft_memset(void *b, int c, size_t len)
 // 	}
 // 	return (0);
 // }
+
+/*
+int arr[4]
+In memory it looks like this (each box is 1 byte)
+array[0]: [  ][  ][  ][  ]
+array[1]: [  ][  ][  ][  ]
+array[2]: [  ][  ][  ][  ]
+array[3]: [  ][  ][  ][  ]
+
+When you memset(array, 0, sizeof(array)):
+array[0]: [00][00][00][00] = 0 in integer
+array[1]: [00][00][00][00] = 0 in integer
+array[2]: [00][00][00][00] = 0 in integer
+array[3]: [00][00][00][00] = 0 in integer
+
+When you memset(array, -1, sizeof(array)):
+array[0]: [FF][FF][FF][FF] = -1 in integer
+array[1]: [FF][FF][FF][FF] = -1 in integer
+array[2]: [FF][FF][FF][FF] = -1 in integer
+array[3]: [FF][FF][FF][FF] = -1 in integer
+
+But if you memset(array, 1, sizeof(array)):
+array[0]: [01][01][01][01] = 16843009 in integer (not 1!)
+array[1]: [01][01][01][01] = 16843009 in integer
+array[2]: [01][01][01][01] = 16843009 in integer
+array[3]: [01][01][01][01] = 16843009 in integer
+This is why memset is mainly used for setting memory to 0 or -1, because those are 
+the only values that make sense when setting byte by byte
+*/
